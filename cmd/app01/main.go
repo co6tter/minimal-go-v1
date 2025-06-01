@@ -27,4 +27,40 @@ func main() {
 	fmt.Println("Your name?")
 	fmt.Scanf("%s", &name)
 	fmt.Printf("Hi, %s\n", name)
+
+	score := 80
+	switch {
+	case score >= 90:
+		fmt.Println("A!")
+	case score >= 70:
+		fmt.Println("B!")
+	default:
+		fmt.Println("C!")
+	}
+
+	score1a := 3
+	switch score1a {
+	case 0:
+		fmt.Println("Fail!")
+	case 1:
+		fmt.Println("C!")
+	case 2:
+		fmt.Println("B!")
+	case 3, 4, 5:
+		fmt.Println("A!")
+	default:
+		fmt.Println("Invalid score!")
+	}
+
+	money := 100.0
+	for year := 1; year <= 30; year++ {
+		money *= 1.05
+		if money > 300 {
+			break
+		}
+		if money < 200 {
+			continue
+		}
+		fmt.Printf("Year %d: %f\n", year, money)
+	}
 }
